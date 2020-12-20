@@ -1,5 +1,5 @@
 var helicopterIMG, helicopterSprite, packageSprite,packageIMG;
-var packageBody,ground
+var packageBody,ground,packageCage,packageCage1,packageCage2;
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -15,7 +15,15 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
+        packageCage=createSprite(width/2, 653, 200,15);
+	packageCage.shapeColor="red";
 
+        packageCage1=createSprite(508, 610, 15,100);
+	packageCage1.shapeColor="red";
+
+	packageCage2=createSprite(292, 610, 15,100);
+	packageCage2.shapeColor="red";
+	
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
